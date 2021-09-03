@@ -3,7 +3,6 @@ const Hapi = require('@hapi/hapi');
 const notes = require('./api/notes');
 const NotesService = require('./sevices/inMemory/NotesService');
 const NotesValidator = require('./validator/notes/index');
-const { required } = require('./validator/notes/schema');
 
 const init = async () => {
   const notesService = new NotesService();
