@@ -1,4 +1,4 @@
-const NotesHandler = require('./handler');
+const NotesHandler = require('./Handler');
 const routes = require('./routes');
 
 module.exports = {
