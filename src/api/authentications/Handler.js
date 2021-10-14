@@ -54,7 +54,9 @@ class AuthenticationsHandler {
   async putAuthenticationHandler({ payload }, h) {
     try {
       this._validator.validatePutAuthenticationPayload(payload);
+      // verify apakak token ada
       await this._authenticationsService.verifyRefreshToken(payload.refreshToken);
+      // verify apakah token valid
       const { id } = this._tokenManager.verifyRefreshToken(payload.refreshToken);
       const accessToken = this._tokenManager.generateAccessToken({ id });
 
